@@ -1,11 +1,14 @@
 import React from 'react';
-
-const App: React.FC = () => {
+import { Header } from './ui/header';
+import { ThemeProvider } from '@mui/material';
+import theme from './ui/theme' ;
+export const App: React.FC<{}> = () => {
   return (
-    <div>
-      <h3>Hello world</h3>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className='App'>
+        <Header />
+        Hello
+      </div>
+    </ThemeProvider>
   )
 }
-
-export default App;
